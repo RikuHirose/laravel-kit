@@ -1,6 +1,6 @@
-# gscc_webapp
+# laravel_kit
 ## Descriptions
-
+便利なやつがいろいろ入ってる
 
 ## How To Set Up This App
 
