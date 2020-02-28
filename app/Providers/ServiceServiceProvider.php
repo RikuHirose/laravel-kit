@@ -23,8 +23,8 @@ class ServiceServiceProvider extends ServiceProvider
     {
         // User
         $this->app->singleton(
-            \App\Services\UserServiceInterface::class,
-            \App\Services\Production\UserService::class
+            \App\Services\User\UserServiceInterface::class,
+            \App\Services\User\UserService::class
         );
     }
 }
