@@ -92,6 +92,14 @@ class CreateServiceFileCommand extends Command
         $this->creatServiceFile();
         $this->createInterFaceFile();
         $this->info('create successfully');
+        $this->line('');
+        $this->comment('Add the following route to app/Providers/ServiceServiceProvider.php:');
+        $this->line('');
+        $this->info("    \$this->app->bind(
+            \\App\\Services\\$this->dirName\\$this->dirName". "ServiceInterface::class,
+            \\App\\Services\\$this->dirName\\$this->dirName". "Service::class
+        );");
+        $this->line('');
     }
 
     /**

@@ -92,6 +92,14 @@ class CreateRepositoryFileCommand extends Command
         $this->createRepositoryFile();
         $this->createInterFaceFile();
         $this->info('create successfully');
+        $this->line('');
+        $this->comment('Add the following route to app/Providers/RepositoryServiceProvider.php:');
+        $this->line('');
+        $this->info("    \$this->app->bind(
+            \\App\\Repositories\\$this->dirName\\$this->dirName". "RepositoryInterface::class,
+            \\App\\Repositories\\$this->dirName\\$this->dirName". "Repository::class
+        );");
+        $this->line('');
     }
 
     /**
